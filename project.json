@@ -1,7 +1,7 @@
 {
-  "name": "RE-Framework 템플릿",
+  "name": "RPA07_견적서 메일 발송_RE",
   "projectId": "4d122f37-8fb4-44ea-b29a-d30028696785",
-  "description": "TransactionItem을 DataRow로 사용하는 템플릿",
+  "description": "견적서 메일 발송",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.24.4]",

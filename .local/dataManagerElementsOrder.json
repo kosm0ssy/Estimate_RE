@@ -188,7 +188,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Jobs/02_메일 발송.xaml",
+      "Path": "Jobs/03_메일 발송.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "dtDataResult&Sequence_1",
@@ -205,6 +205,14 @@
         "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/00_초기 설정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
   ]
