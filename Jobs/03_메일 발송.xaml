@@ -120,7 +120,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_03_메일_발송" sap:VirtualizedContainerService.HintSize="895.6,1124" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_03_메일_발송" sap:VirtualizedContainerService.HintSize="896.4000000000001,1124" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtDataResult" />
       <Variable x:TypeArguments="x:String" Name="strDataResult" />
@@ -318,7 +318,7 @@
         </Sequence>
         <Assign sap2010:Annotation.AnnotationText="{}{0}&amp;nbsp;{1}&amp;nbsp;결과 안내 메일입니다.&#xA;결과 데이터를&amp;nbsp;확인하여 주시기 바랍니다.&#xA;감사합니다.&#xA;{4} = RPA 수행 결과&#xA;{5} = Data" sap:VirtualizedContainerService.HintSize="449.6,196.8" sap2010:WorkflowViewState.IdRef="Assign_4">
           <Assign.To>
-            <OutArgument x:TypeArguments="x:Object">[in_Config("SendMailBody_Simple")]</OutArgument>
+            <OutArgument x:TypeArguments="x:Object">[in_Config("SendMailBody_NoAtt")]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:Object">[String.Format(in_Config("SendMailBody_Simple").ToString.Trim, Date.Today.ToString("yyyy/MM/dd"), "부동산 공시 가격", strRpaResult, "")]</InArgument>

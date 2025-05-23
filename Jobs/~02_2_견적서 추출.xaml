@@ -111,35 +111,36 @@
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02_2_견적서_추출" sap:VirtualizedContainerService.HintSize="894.8000000000001,2554.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02_2_견적서_추출" sap:VirtualizedContainerService.HintSize="894.8000000000001,2523.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;** 견적서 추출 시작 **&quot;]" />
-    <Sequence DisplayName="견적서 출력 | Sequence" sap:VirtualizedContainerService.HintSize="550.4,2191.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="견적서 출력 | Sequence" sap:VirtualizedContainerService.HintSize="550.4,2160" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="516.8,2099.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="516.8,2068" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1859.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1828" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="견적서 생성 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,1110.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="견적서 생성 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,1079.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,15 +165,10 @@
                     </uix:SearchedElement>
                   </uix:NMouseScroll.SearchedElement>
                 </uix:NMouseScroll>
-                <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="UISelector &gt; a tag로 변경" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,220.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V4">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V4">
                   <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCart.do" DesignTimeRectangle="283, 969, 110, 55" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl href='#link' parentid='container' parentname='mainForm' tag='A' idx='7' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='견적서' parentid='container' tag='IMG' type='' class='' /&gt;" Guid="e96abfa1-843f-43ce-9b0a-cb3efc672e9d" InformativeScreenshot="563d1416c6d243f7f953ced13517b41a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCartUpdate.do" DesignTimeRectangle="283, 579, 110, 55" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='견적서' parentid='container' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='견적서' parentid='container' tag='IMG' type='' class='' /&gt;" Guid="90935633-205c-4a4b-a159-8370cf41b6c4" InformativeScreenshot="f56d7f97a61eed8ade6351345471f78d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                   </uix:NClick.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
                 <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="fuzzy selector &gt; off" ClickType="Single" DisplayName="Click 'PDF 다운로드'" sap:VirtualizedContainerService.HintSize="416,213.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V4">
                   <uix:NClick.Target>
