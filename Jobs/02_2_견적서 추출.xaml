@@ -48,6 +48,8 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -111,35 +113,36 @@
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02_2_견적서_추출" sap:VirtualizedContainerService.HintSize="894.8000000000001,2554.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02_2_견적서_추출" sap:VirtualizedContainerService.HintSize="812.4000000000001,2440.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;** 견적서 추출 시작 **&quot;]" />
-    <Sequence DisplayName="견적서 출력 | Sequence" sap:VirtualizedContainerService.HintSize="550.4,2191.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;** 견적서 추출 시작 **&quot;]" />
+    <Sequence DisplayName="견적서 출력 | Sequence" sap:VirtualizedContainerService.HintSize="568,2077.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="516.8,2099.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V2">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1859.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="견적서 생성 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,1110.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence DisplayName="견적서 생성 | Sequence" sap:VirtualizedContainerService.HintSize="534.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="483.2,1066.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,826.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,37 +167,80 @@
                     </uix:SearchedElement>
                   </uix:NMouseScroll.SearchedElement>
                 </uix:NMouseScroll>
-                <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="UISelector &gt; a tag로 변경" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,220.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V4">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,182.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V4">
                   <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCart.do" DesignTimeRectangle="283, 969, 110, 55" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl href='#link' parentid='container' parentname='mainForm' tag='A' idx='7' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='견적서' parentid='container' tag='IMG' type='' class='' /&gt;" Guid="e96abfa1-843f-43ce-9b0a-cb3efc672e9d" InformativeScreenshot="563d1416c6d243f7f953ced13517b41a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCartUpdate.do" DesignTimeRectangle="283, 579, 110, 55" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;span&amp;gt;a' href='#link' parentid='container' parentname='mainForm' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='견적서' parentid='container' tag='IMG' type='' class='' /&gt;" Guid="90935633-205c-4a4b-a159-8370cf41b6c4" InformativeScreenshot="f56d7f97a61eed8ade6351345471f78d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                   </uix:NClick.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </uix:NClick>
-                <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="fuzzy selector &gt; off" ClickType="Single" DisplayName="Click 'PDF 다운로드'" sap:VirtualizedContainerService.HintSize="416,213.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Version="V4">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/common/report/reportPopup.do" DesignTimeRectangle="203, 794, 125, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='btn_pdf' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btn_pdf' tag='INPUT' type='button' class='' aaname='PDF 다운로드' check:text='PDF 다운로드' /&gt;" Guid="a2ebbc61-cea8-4e8b-923e-4a876601b338" InformativeScreenshot="4d362d94aa15c32e17b2c7cb2b5b4506.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='estimate' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                  </uix:NClick.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
               </Sequence>
-              <Sequence sap2010:Annotation.AnnotationText="chrome &gt; setting &gt; downloads &gt; 다운로드 전 파일 위치 확인" DisplayName="pdf 다운로드 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,687.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-9, -9, 1938, 1218" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUmSURBVFhH7VZpbFVVED4tYCJBQipWBKFUrHTBLhT0hRaBEoNWpASEaAUpxEIKCAULig2yJGyWQgAbQVYVCIi0YBBkCwIKSDEsRQWXFvru0vfuW+7b1/YzZ+4ttLUxmqjwoz8m78ycc898882cmcdE9jTupbCWhv9b2gC0AbhPAUQkQ4xIgciSW+wlQ2yXCjGS7+nnuN54ttH+D6Q5AH5hZAoE1hcCexIiS4IYmXrXOUuEkfWEwGIhslQILB5G9rh+NhEC6wOR9fuTk7+SJgC4gwS6XO6eBVPqWEidBkBgvfXIEiE/mgH7tKWw5swiZ3UxWVBnroAyJA9yVAaUzAkQ2+kscGbapd1lhQdCemNAzQBozuVug+EtP46GcBgNDQ0IW1Wo81ZrIKJSELotkdgLFkLuaUC96kKoWoCSPQXqeyvpG/PAV4kRISIWRtZDZ4Wz2htG1l1nryUAoj0Wnp1f0iXqvFKYEnLg++o06bYpxXCt2UFr797DUDJfh3fvEdLd2yugZE2Gs2QbfAdPQY4eDIE9BduEBXBt2A3ryBkQ2BOw5s6He0s5rGMLKcVNAGi5lToORNjuROCHKhhZDOXalP6y5nTfUXh2HaK1/8JV2PPfh+/4OU0/cwn2/EUIXP6JdFPcS/DsPoSw04Xgr7fg3X8MjoXrUO/zwbl8kxbgnFXkg6dJB9APYmQyQr/XIiwpELv0x23WGZacAp2RZZD6DKS1JX8mahiDMu4N0pUxk0h3rCnT9OzJGmuzi3GbdYQclUn3cjDOJWUI3qyBq2y3lopIAqAVCEekztXy6L90He7t5Qibrah3eWBOyYFaqO25P9oD+SEDXKu3ke76YBvkrs/Bd+SsDrYEYcWG4I+/QS0qhWXEVGKr3ueHOncVHAvWQhmaB4HF0fNt9gqMrBeUoZPg3rwPvmPfwbX2M9TFj4DYOQHureVwb9wD95Z9sI6bA/fHn8O9+Qu4NuyEbeICotpbcRLO5RthShsN95b9CN6ogePdEkjdDHBt2AXf4TNU5GZDbmsAEqmCzenjoQzKhTltPATWk5xbhufDFD8SSsZEEinKAFPfbJjTx8EyLA+mxFEwssdQyx6GHDMU6qyVsGRPpx4hRQ+AkjkZpn6j6bx5wHhInQ1aj7nzCiL4K4iDvWAx0Rj4/hoCVTeJSsuIN+E9cILsnq37EbxZDVtuEewFS8nmO/YtgtW1xJrttbe1FJ6/jLBNhe/EOXg+OYiQaEKo2oiwrCBsssAxv5SKnPeFO31AYAmQuqZrBTR1PowsmtbOks2wTSrS8r+jAu5PKyA9mAa5VwbZHIvWw3+6EoGL1xC4cAX+by7iFmsP0zM52vfLNlHBeQ98jUDlNUjRBtR1H059h/vVGeAA+qIu5nnt0uJ1sI5+i9b2aYuhzlim2ReXwXf0LMzJY2Hq8+KdaB3F6yE/MgjegycoQrlHFtTZK2jfMmY6alkX+E+eR+jGLeoJYgf+8rQO2SwF6julCP5Sg0BlFfyVVVCLSlAXOxzeQ6eoqj07KhC48jOsrxTSXqjGCM+ew5Rn6htJo+A/U4mw1Y4Qp3rJh9QVrWMKEbh0HYGrN2B5IR/KsDxInZ6lOmg+jNrzPp2kMxKn5SmS2znaBEgP9IcYwYdNEqQOabotTbdrQfDWK3cdAqljutbCeY/hZ/k9/FuannenbItx3DjJ+C8ftdxJE73ZpGt6VrfxsUxA4ltM0ta+axXAvyUcbMv/Eq3LfwTg70sbgDYAbQDuOYA/AJQGZNAiRm5bAAAAAElFTkSuQmCC" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="28f18d9732c3127685ce31ad94b05150.jpg" Selector="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" Title="오피스디포 공식쇼핑몰" Url="https://www.officedepot.co.kr/cart/myCart.do" Version="V1" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </Sequence>
+      <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+      <Sequence sap2010:Annotation.AnnotationText="chrome &gt; setting &gt; downloads &gt; 다운로드 전 파일 위치 확인" DisplayName="pdf 다운로드 | Sequence" sap:VirtualizedContainerService.HintSize="534.4,1806.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="500.8,1692" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="cf7df122-7adb-438f-962e-92cd25d6dacd" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1452" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="strDownloadPath" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="&quot;[k(Back)]&quot; +Path.Combine(Environment.CurrentDirectory, in_Config(&quot;OutputPath&quot;).ToString.Trim, in_TransactionItem(&quot;FileName&quot;).ToString.Trim +&quot;.pdf&quot;)" ClickBeforeMode="Single" DisplayName="Type Into " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,326.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Text="[&quot;[k(Back)]&quot; +Path.Combine(Environment.CurrentDirectory, in_Config(&quot;OutputPath&quot;).ToString.Trim)]" Version="V4">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'PDF 다운로드'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cf7df122-7adb-438f-962e-92cd25d6dacd" Version="V4">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCartUpdate.do" DesignTimeRectangle="203, 794, 125, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;span' parentid='wrap_popup' tag='SPAN' idx='2' /&gt;&lt;webctrl id='btn_pdf' tag='INPUT' /&gt;" Guid="72ff1ac7-f01a-4be1-a68d-68dc1f74364c" ImageBase64="" InformativeScreenshot="d65f5cc1d810214d79d39825e95e56d8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='estimate' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <Delay Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                <Assign sap2010:Annotation.AnnotationText="&quot;[k(Back)]&quot; +Path.Combine(Environment.CurrentDirectory, in_Config(&quot;OutputPath&quot;).ToString.Trim, in_Config(&quot;FileName&quot;).ToString.Trim +&quot;.pdf&quot;)" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[strDownloadPath]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[Path.Combine(Environment.CurrentDirectory, in_Config("OutputPath").ToString.Trim)]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '이전 위치'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cf7df122-7adb-438f-962e-92cd25d6dacd" Version="V4">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/common/report/reportPopup.do" DesignTimeRectangle="478, 48, 43, 43" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;&lt;ctrl name='주소 대역' role='tool bar' /&gt;&lt;ctrl name='이전 위치' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;&lt;ctrl name='주소 대역' role='tool bar' /&gt;&lt;ctrl name='이전 위치' role='push button' automationid='' check:text='이전 위치' /&gt;" Guid="67c725c2-3a18-440e-8884-245e9afdf9d1" InformativeScreenshot="21f7f8b0fb85177937972632b8511ffd.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\Users\Kosm._.os\Docu…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="HardwareEvents" ScopeIdentifier="cf7df122-7adb-438f-962e-92cd25d6dacd" Text="[&quot;[k(Back)]&quot; +strDownloadPath]" Version="V4">
                   <uix:NTypeInto.Target>
-                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCart.do" DesignTimeRectangle="190, 48, 397, 44" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='1001' title='주소: C:\Users\Kosm._.os\Documents\work\rpa workspace\RPA07_견적서 메일*' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='1001' title='주소: C:\Users\Kosm._.os\Documents\work\rpa workspace\RPA07_견적서 메일*' check:text='주소: C:\Users\Kosm._.os\Documents\work\rpa workspace\RPA07_견적서 메일 발송_RE\Data\Output' /&gt;" Guid="b3931569-8a70-443e-9be0-f65c997eebf8" InformativeScreenshot="eb18b36e300ebe5f873a821e092f4281.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/common/report/reportPopup.do" DesignTimeRectangle="182, 48, 339, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd cls='msctls_progress32' /&gt;&lt;wnd ctrlid='41477' /&gt;&lt;wnd ctrlid='41477' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='41477' /&gt;&lt;wnd ctrlid='41477' /&gt;" Guid="4ee89d15-768f-435b-9371-4877a0e640da" InformativeScreenshot="f69ed1c80ecab92ebdff8f94e08f5a6e.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '주소 대역'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cf7df122-7adb-438f-962e-92cd25d6dacd" Version="V4">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/common/report/reportPopup.do" DesignTimeRectangle="521, 48, 43, 44" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' check:text='주소 대역' /&gt;" Guid="2df23b1b-9cb9-41fa-bc0e-1269d3bc4b84" InformativeScreenshot="66b5970628a1853bbe1baa1a8d204dca.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="in_Config(&quot;FileName&quot;).ToString.Trim + &quot;[k(Enter)]&quot;" ClickBeforeMode="Single" DisplayName="Type Into '견적서_2025-05-22'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,274.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="cf7df122-7adb-438f-962e-92cd25d6dacd" Text="[in_Config(&quot;FileName&quot;).ToString.Trim + &quot;[k(Enter)]&quot;]" Version="V4">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCart.do" DesignTimeRectangle="169, 402, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="937c4b71-cecf-4f2d-9060-8f8360e2274d" InformativeScreenshot="38fd91c1130a99c02ec7442d63f256b1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                   </uix:NTypeInto.Target>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -202,20 +248,21 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NTypeInto>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '견적서_2025-05-22'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="8a143555-0bc9-45b1-a691-65d7f7b141b5" Text="[in_TransactionItem(&quot;FileName&quot;).ToString.Trim + &quot;[k(Enter)]&quot;]" Version="V4">
-                  <uix:NTypeInto.Target>
-                    <uix:TargetAnchorable BrowserURL="officedepot.co.kr/cart/myCart.do" DesignTimeRectangle="169, 402, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="937c4b71-cecf-4f2d-9060-8f8360e2274d" InformativeScreenshot="38fd91c1130a99c02ec7442d63f256b1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
-                  </uix:NTypeInto.Target>
-                </uix:NTypeInto>
               </Sequence>
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-9, -9, 1938, 1218" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUmSURBVFhH7VZpbFVVED4tYCJBQipWBKFUrHTBLhT0hRaBEoNWpASEaAUpxEIKCAULig2yJGyWQgAbQVYVCIi0YBBkCwIKSDEsRQWXFvru0vfuW+7b1/YzZ+4ttLUxmqjwoz8m78ycc898882cmcdE9jTupbCWhv9b2gC0AbhPAUQkQ4xIgciSW+wlQ2yXCjGS7+nnuN54ttH+D6Q5AH5hZAoE1hcCexIiS4IYmXrXOUuEkfWEwGIhslQILB5G9rh+NhEC6wOR9fuTk7+SJgC4gwS6XO6eBVPqWEidBkBgvfXIEiE/mgH7tKWw5swiZ3UxWVBnroAyJA9yVAaUzAkQ2+kscGbapd1lhQdCemNAzQBozuVug+EtP46GcBgNDQ0IW1Wo81ZrIKJSELotkdgLFkLuaUC96kKoWoCSPQXqeyvpG/PAV4kRISIWRtZDZ4Wz2htG1l1nryUAoj0Wnp1f0iXqvFKYEnLg++o06bYpxXCt2UFr797DUDJfh3fvEdLd2yugZE2Gs2QbfAdPQY4eDIE9BduEBXBt2A3ryBkQ2BOw5s6He0s5rGMLKcVNAGi5lToORNjuROCHKhhZDOXalP6y5nTfUXh2HaK1/8JV2PPfh+/4OU0/cwn2/EUIXP6JdFPcS/DsPoSw04Xgr7fg3X8MjoXrUO/zwbl8kxbgnFXkg6dJB9APYmQyQr/XIiwpELv0x23WGZacAp2RZZD6DKS1JX8mahiDMu4N0pUxk0h3rCnT9OzJGmuzi3GbdYQclUn3cjDOJWUI3qyBq2y3lopIAqAVCEekztXy6L90He7t5Qibrah3eWBOyYFaqO25P9oD+SEDXKu3ke76YBvkrs/Bd+SsDrYEYcWG4I+/QS0qhWXEVGKr3ueHOncVHAvWQhmaB4HF0fNt9gqMrBeUoZPg3rwPvmPfwbX2M9TFj4DYOQHureVwb9wD95Z9sI6bA/fHn8O9+Qu4NuyEbeICotpbcRLO5RthShsN95b9CN6ogePdEkjdDHBt2AXf4TNU5GZDbmsAEqmCzenjoQzKhTltPATWk5xbhufDFD8SSsZEEinKAFPfbJjTx8EyLA+mxFEwssdQyx6GHDMU6qyVsGRPpx4hRQ+AkjkZpn6j6bx5wHhInQ1aj7nzCiL4K4iDvWAx0Rj4/hoCVTeJSsuIN+E9cILsnq37EbxZDVtuEewFS8nmO/YtgtW1xJrttbe1FJ6/jLBNhe/EOXg+OYiQaEKo2oiwrCBsssAxv5SKnPeFO31AYAmQuqZrBTR1PowsmtbOks2wTSrS8r+jAu5PKyA9mAa5VwbZHIvWw3+6EoGL1xC4cAX+by7iFmsP0zM52vfLNlHBeQ98jUDlNUjRBtR1H059h/vVGeAA+qIu5nnt0uJ1sI5+i9b2aYuhzlim2ReXwXf0LMzJY2Hq8+KdaB3F6yE/MgjegycoQrlHFtTZK2jfMmY6alkX+E+eR+jGLeoJYgf+8rQO2SwF6julCP5Sg0BlFfyVVVCLSlAXOxzeQ6eoqj07KhC48jOsrxTSXqjGCM+ew5Rn6htJo+A/U4mw1Y4Qp3rJh9QVrWMKEbh0HYGrN2B5IR/KsDxInZ6lOmg+jNrzPp2kMxKn5SmS2znaBEgP9IcYwYdNEqQOabotTbdrQfDWK3cdAqljutbCeY/hZ/k9/FuannenbItx3DjJ+C8ftdxJE73ZpGt6VrfxsUxA4ltM0ta+axXAvyUcbMv/Eq3LfwTg70sbgDYAbQDuOYA/AJQGZNAiRm5bAAAAAElFTkSuQmCC" InformativeScreenshot="28f18d9732c3127685ce31ad94b05150.jpg" Selector="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" Title="오피스디포 공식쇼핑몰" Url="https://www.officedepot.co.kr/cart/myCart.do" Version="V1" />
-        </uix:NApplicationCard.TargetApp>
-      </uix:NApplicationCard>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="491, 162, 961, 977" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUmSURBVFhH7VZpbFVVED4tYCJBQipWBKFUrHTBLhT0hRaBEoNWpASEaAUpxEIKCAULig2yJGyWQgAbQVYVCIi0YBBkCwIKSDEsRQWXFvru0vfuW+7b1/YzZ+4ttLUxmqjwoz8m78ycc898882cmcdE9jTupbCWhv9b2gC0AbhPAUQkQ4xIgciSW+wlQ2yXCjGS7+nnuN54ttH+D6Q5AH5hZAoE1hcCexIiS4IYmXrXOUuEkfWEwGIhslQILB5G9rh+NhEC6wOR9fuTk7+SJgC4gwS6XO6eBVPqWEidBkBgvfXIEiE/mgH7tKWw5swiZ3UxWVBnroAyJA9yVAaUzAkQ2+kscGbapd1lhQdCemNAzQBozuVug+EtP46GcBgNDQ0IW1Wo81ZrIKJSELotkdgLFkLuaUC96kKoWoCSPQXqeyvpG/PAV4kRISIWRtZDZ4Wz2htG1l1nryUAoj0Wnp1f0iXqvFKYEnLg++o06bYpxXCt2UFr797DUDJfh3fvEdLd2yugZE2Gs2QbfAdPQY4eDIE9BduEBXBt2A3ryBkQ2BOw5s6He0s5rGMLKcVNAGi5lToORNjuROCHKhhZDOXalP6y5nTfUXh2HaK1/8JV2PPfh+/4OU0/cwn2/EUIXP6JdFPcS/DsPoSw04Xgr7fg3X8MjoXrUO/zwbl8kxbgnFXkg6dJB9APYmQyQr/XIiwpELv0x23WGZacAp2RZZD6DKS1JX8mahiDMu4N0pUxk0h3rCnT9OzJGmuzi3GbdYQclUn3cjDOJWUI3qyBq2y3lopIAqAVCEekztXy6L90He7t5Qibrah3eWBOyYFaqO25P9oD+SEDXKu3ke76YBvkrs/Bd+SsDrYEYcWG4I+/QS0qhWXEVGKr3ueHOncVHAvWQhmaB4HF0fNt9gqMrBeUoZPg3rwPvmPfwbX2M9TFj4DYOQHureVwb9wD95Z9sI6bA/fHn8O9+Qu4NuyEbeICotpbcRLO5RthShsN95b9CN6ogePdEkjdDHBt2AXf4TNU5GZDbmsAEqmCzenjoQzKhTltPATWk5xbhufDFD8SSsZEEinKAFPfbJjTx8EyLA+mxFEwssdQyx6GHDMU6qyVsGRPpx4hRQ+AkjkZpn6j6bx5wHhInQ1aj7nzCiL4K4iDvWAx0Rj4/hoCVTeJSsuIN+E9cILsnq37EbxZDVtuEewFS8nmO/YtgtW1xJrttbe1FJ6/jLBNhe/EOXg+OYiQaEKo2oiwrCBsssAxv5SKnPeFO31AYAmQuqZrBTR1PowsmtbOks2wTSrS8r+jAu5PKyA9mAa5VwbZHIvWw3+6EoGL1xC4cAX+by7iFmsP0zM52vfLNlHBeQ98jUDlNUjRBtR1H059h/vVGeAA+qIu5nnt0uJ1sI5+i9b2aYuhzlim2ReXwXf0LMzJY2Hq8+KdaB3F6yE/MgjegycoQrlHFtTZK2jfMmY6alkX+E+eR+jGLeoJYgf+8rQO2SwF6julCP5Sg0BlFfyVVVCLSlAXOxzeQ6eoqj07KhC48jOsrxTSXqjGCM+ew5Rn6htJo+A/U4mw1Y4Qp3rJh9QVrWMKEbh0HYGrN2B5IR/KsDxInZ6lOmg+jNrzPp2kMxKn5SmS2znaBEgP9IcYwYdNEqQOabotTbdrQfDWK3cdAqljutbCeY/hZ/k9/FuannenbItx3DjJ+C8ftdxJE73ZpGt6VrfxsUxA4ltM0ta+axXAvyUcbMv/Eq3LfwTg70sbgDYAbQDuOYA/AJQGZNAiRm5bAAAAAElFTkSuQmCC" sap2010:WorkflowViewState.IdRef="TargetApp_2" InformativeScreenshot="8ae2b544cdcf488c2462c32dce830aab.jpg" Selector="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" Title="오피스디포 공식쇼핑몰" Url="https://www.officedepot.co.kr/common/report/reportPopup.do?reportUrl=/cart/report.do&amp;reportType=estimate&amp;format=pdf&amp;itemId=10030004574463&amp;itemId=1000000001497&amp;itemId=1000000004050&amp;itemId=4977564304850&amp;itemId=305010&amp;itemId=100220&amp;itemId=1000000004599&amp;estimateSelectItem=1&amp;popupYn=Y" Version="V1" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </Sequence>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;** 견적서 추출 완료 **&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;** 견적서 추출 완료 **&quot;]" />
   </Sequence>
 </Activity>

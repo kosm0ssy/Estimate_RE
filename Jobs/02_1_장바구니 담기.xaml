@@ -240,20 +240,20 @@
       <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02_1_장바구니_담기" sap:VirtualizedContainerService.HintSize="896.4000000000001,1940.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02_1_장바구니_담기" sap:VirtualizedContainerService.HintSize="894.8000000000001,2180.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="516.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;** 품목 검색 시작 **&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="516.8,1577.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fc93a17b-e7e1-4937-85a8-3fe6aa27fdbc" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="516.8,1817.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fc93a17b-e7e1-4937-85a8-3fe6aa27fdbc" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1328.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1568.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strSessionData" />
             </Sequence.Variables>
@@ -263,7 +263,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="장바구니 담기 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,1219.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="장바구니 담기 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,1343.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -301,12 +301,13 @@
               </uix:NMouseScroll>
               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="fc93a17b-e7e1-4937-85a8-3fe6aa27fdbc" Text="[in_TransactionItem(&quot;수량&quot;).ToString.Trim]" Version="V4">
                 <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable BrowserURL="officedepot.co.kr/main/searchItemList.do" DesignTimeRectangle="332, 640, 53, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='itemCount' parentid='container' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='itemCount' parentid='container' tag='INPUT' type='text' aaname='' /&gt;" Guid="5734b75f-fa8d-4406-9e30-6bc11efc2470" InformativeScreenshot="fea65f9e6b2d2a59bb13f154ca7d11a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="officedepot.co.kr/main/searchItemList.do" DesignTimeRectangle="332, 640, 53, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='itemCount' parentid='container' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='itemCount' parentid='container' tag='INPUT' type='text' aaname='' /&gt;" Guid="5734b75f-fa8d-4406-9e30-6bc11efc2470" InformativeScreenshot="fea65f9e6b2d2a59bb13f154ca7d11a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
+              <Delay Duration="00:00:00.4000000" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
               <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="UIExplorer &gt; a tag로 변경" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,220.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fc93a17b-e7e1-4937-85a8-3fe6aa27fdbc" Version="V4">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="officedepot.co.kr/main/searchItemList.do" DesignTimeRectangle="434, 641, 17, 16" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl href='#link' parentid='container' parentname='mainForm' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='addcart_span' parentid='container' tag='IMG' type='' aaname='담기' /&gt;" Guid="c3d61534-a546-4782-b730-d61292ad3d14" InformativeScreenshot="0d17ee9146c39d862660239dc910da01.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="officedepot.co.kr/main/searchItemList.do" DesignTimeRectangle="434, 641, 17, 16" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl href='#link' parentid='container' parentname='mainForm' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='addcart_span' parentid='container' tag='IMG' type='' aaname='담기' /&gt;" Guid="c3d61534-a546-4782-b730-d61292ad3d14" InformativeScreenshot="0d17ee9146c39d862660239dc910da01.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
                 </uix:NClick.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -314,20 +315,28 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NClick>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '취소'" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fc93a17b-e7e1-4937-85a8-3fe6aa27fdbc" Version="V4">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '취소'" sap:VirtualizedContainerService.HintSize="416,182.4" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fc93a17b-e7e1-4937-85a8-3fe6aa27fdbc" Version="V4">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="officedepot.co.kr/main/searchItemList.do" DesignTimeRectangle="1144, 272, 80, 49" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='www.officedepot.co.kr 내용:' role='dialog' /&gt;&lt;ctrl name='취소' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='www.officedepot.co.kr 내용:' role='dialog' /&gt;&lt;ctrl name='취소' role='push button' automationid='' check:fulltext='취소' /&gt;" Guid="a3145d4f-aca2-43e4-9798-de172f39999f" InformativeScreenshot="897cc8330ab88e6e452f021f6b8941ac.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='오피스디포 공식쇼핑몰 - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="officedepot.co.kr/main/searchItemList.do" DesignTimeRectangle="1144, 272, 80, 49" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='www.officedepot.co.kr 내용:' role='dialog' /&gt;&lt;ctrl name='취소' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='www.officedepot.co.kr 내용:' role='dialog' /&gt;&lt;ctrl name='취소' role='push button' automationid='' check:fulltext='취소' /&gt;" Guid="a3145d4f-aca2-43e4-9798-de172f39999f" InformativeScreenshot="897cc8330ab88e6e452f021f6b8941ac.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='오피스디포 공식쇼핑몰 - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
                 </uix:NClick.Target>
               </uix:NClick>
             </Sequence>
-            <Sequence DisplayName="마지막 Transaction에서 견적서 추출 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Assign sap:VirtualizedContainerService.HintSize="449.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem("RPA 수행결과")]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Object">["성공"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Sequence DisplayName="마지막 Transaction에서 견적서 추출 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[in_TransactionNumber &gt;= in_dt_TransactionData.RowCount]" sap:VirtualizedContainerService.HintSize="417.6,638.4" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[in_TransactionNumber = in_dt_TransactionData.RowCount]" sap:VirtualizedContainerService.HintSize="417.6,638.4" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,341.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
