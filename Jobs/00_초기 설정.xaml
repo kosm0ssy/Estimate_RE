@@ -123,7 +123,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_00_메일_수신" sap:VirtualizedContainerService.HintSize="894.8000000000001,844" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_00_메일_수신" sap:VirtualizedContainerService.HintSize="882.4000000000001,519.64" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="SavedAttachments" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtEstimate" />
@@ -133,17 +133,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="_00_Get_Credential" sap:VirtualizedContainerService.HintSize="467.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="xzerokim@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[out_sstrPw]" Username="[in_Config(&quot;CredentialId&quot;)]" />
-    </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="467.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;** 메일 수신 **&quot;]" />
-    <Sequence DisplayName="폴더 초기화 | Sequence" sap:VirtualizedContainerService.HintSize="467.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+    <Sequence DisplayName="폴더 초기화 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -191,7 +181,8 @@
         </ui:ForEachFileX.Body>
       </ui:ForEachFileX>
     </Sequence>
-    <Sequence DisplayName="_02_IMAP_메일_수신" sap:VirtualizedContainerService.HintSize="467.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;** 메일 수신 **&quot;]" />
+    <Sequence DisplayName="_02_IMAP_메일_수신" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="lstMailMessages" />
         <Variable x:TypeArguments="x:Int32" Name="intIndex" />
@@ -202,6 +193,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="xzerokim@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[out_sstrPw]" Username="[in_Config(&quot;CredentialId&quot;)]" />
       <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="strId, sstrPw&#xA;lstMailMessages : 수신한 mail &gt; list&#xA;&#xA;Inbox&#xA;읽은 메일 포함 최신순 10개" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[in_Config(&quot;CredentialId&quot;).ToString.Trim]" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[lstMailMessages]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[out_sstrPw]" Server="imap.gmail.com" Top="10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -325,40 +317,58 @@
         </ui:ForEach>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="excel DT 추출 | Sequence" sap:VirtualizedContainerService.HintSize="467.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+    <Sequence DisplayName="excel DT 추출 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="output : dtEstimate" DataTable="[dtEstimate]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="오피스디포" WorkbookPath="[Path.Combine(in_Config(&quot;InputPath&quot;).ToString.Trim, &quot;RPA07_견적서메일발송_20250520.xlsx&quot;)]">
+      <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="output : out_dt_TransactionData" DataTable="[out_dt_TransactionData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="416,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="오피스디포" WorkbookPath="[Path.Combine(in_Config(&quot;InputPath&quot;).ToString.Trim, &quot;RPA07_견적서메일발송_20250520.xlsx&quot;)]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="RPA 수행결과" DataTable="[out_dt_TransactionData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,211.2" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="467.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;** TransactionDT 생성 **&quot;]" />
-    <Sequence DisplayName="TransactionDT 생성 | Sequence" sap:VirtualizedContainerService.HintSize="467.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="483.2,484.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="TransactionDT 생성 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,424.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;** TransactionDT 생성 **&quot;]" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01_TransactionDT생성 - Invoke Workflow File (Jobs\01_TransactionDT생성.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Jobs\01_1_TransactionDT생성.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_TransactionData">[out_dt_TransactionData]</OutArgument>
+                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtEstimate">[dtEstimate]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01_TransactionDT생성 - Invoke Workflow File (Jobs\01_TransactionDT생성.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Jobs\01_1_TransactionDT생성.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_TransactionData">[out_dt_TransactionData]</OutArgument>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtEstimate">[dtEstimate]</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-    </Sequence>
-    <Sequence DisplayName="Config 설정 | Sequence" sap:VirtualizedContainerService.HintSize="467.2,188" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    </ui:CommentOut>
+    <Sequence DisplayName="Config 설정 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
